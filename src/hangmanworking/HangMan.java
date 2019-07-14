@@ -7,9 +7,13 @@ public class HangMan {
 	public static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
 		startGame();
 		genWord();
-		guessLetter();
+		
+//		no need to call guessLetter as the method doesContain calls it
+//		guessLetter();
+		doesContain();
 
 //		playerGuess(); <-- unnecessary method??
 
@@ -32,7 +36,7 @@ public class HangMan {
 		}
 	}
 
-	public static void genWord() {
+	public static String genWord() {
 		String finalAnswer = "";
 		int randomNum = (int)(Math.random() * (10) + 1) + 1;
 
@@ -70,6 +74,8 @@ public class HangMan {
 		
 		// TODO find out how to break string into individual characters
 		}
+		
+		return finalAnswer;
 //		System.out.println(finalAnswer); <-- test code
 	}
 
@@ -80,16 +86,34 @@ public class HangMan {
 //		
 //	}
 	
-	public static void guessLetter() {
+	public static String guessLetter() {
 		String letterGuess;
 		System.out.println("Guess a letter A-Z");
 		letterGuess = sc.next();
+		
+		return letterGuess;
 
 		// TODO add if statement checking if word contains letterGuess
 //		System.out.println(letterGuess); <-- test 
 
 	}
 
+//	XXX idk what im doing, send help
+	public static String doesContain() {
+		String finalAnswer = "";
+		String letterGuess = guessLetter();
+		if (finalAnswer == "")
+			finalAnswer = genWord();
+//		System.out.println(finalAnswer); <-test code
+		
+		if (finalAnswer.contains(letterGuess)) {
+			System.out.println("There is a " + letterGuess);
+		} else {
+			System.out.println("There is no " + letterGuess);
+		}
+		return finalAnswer;
+	} // holy shit that worked
+	
 	public static void printHanger() {
 		System.out.println("       _______ ");
 		System.out.println("      |       |");
