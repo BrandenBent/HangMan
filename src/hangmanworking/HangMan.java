@@ -10,6 +10,8 @@ public class HangMan {
 //		startGame();
 //		guessLetter();
 		genWord();
+		
+		// MORE TESTING CAN YOU SEE THIS
 
 //		printHead();
 //		printBody();
