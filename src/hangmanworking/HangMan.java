@@ -110,7 +110,7 @@ public class HangMan {
 		}
 		int i = 0;
 
-		do  {
+		do {
 			String letterGuess = guessLetter();
 			if (finalAnswer.contains(letterGuess)) {
 				System.out.println("There is a(n) " + letterGuess);
@@ -123,28 +123,32 @@ public class HangMan {
 
 			if (guessRight) {
 				System.out.println("Goodjob");
-			} 
-			
+			}
+
 			switch (i) {
-			case 1: printHead();
-			break;
-			case 2: printBody();
-			break;
-			case 3: printLeftArm();
-			break;
-			case 4: printRightArm();
-			break;
-			case 5: printLeftLeg();
-			break;
-			case 6: printYouLose();
-			break;
-				
-			
-			
+			case 1:
+				printHead();
+				break;
+			case 2:
+				printBody();
+				break;
+			case 3:
+				printLeftArm();
+				break;
+			case 4:
+				printRightArm();
+				break;
+			case 5:
+				printLeftLeg();
+				break;
+			case 6:
+				printYouLose();
+				break;
+
 			}
 //		System.out.println(finalAnswer); <-- test to make sure answer doesn't change
-		} while(i <=6);
-			
+		} while (i <= 6);
+
 		return finalAnswer;
 	} // holy shit that worked kinda
 
@@ -230,10 +234,9 @@ public class HangMan {
 		System.out.println("              |");
 		System.out.println("       _______|________ ");
 		System.out.println("      /_______|________\\ \n");
-		
+
 		System.out.println("YOU LOSE!");
 		System.exit(0);
 	}
-	
 
 } // end class
