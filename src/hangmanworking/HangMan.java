@@ -7,11 +7,11 @@ public class HangMan {
 	public static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-//		startGame();
-//		guessLetter();
+		startGame();
 		genWord();
-		
+		guessLetter();
 
+//		playerGuess(); <-- unnecessary method??
 
 //		printHead();
 //		printBody();
@@ -69,28 +69,24 @@ public class HangMan {
 			break;
 		
 		// TODO find out how to break string into individual characters
-		
-		
 		}
-		
-		
-//		switch (randomNum) {
-//		case randomNum = 
-//		
-//		
-//		
-//		
-//		}
-
+//		System.out.println(finalAnswer); <-- test code
 	}
 
+//	public static void playerGuess() {
+//		String playerGuess;
+//		playerGuess = sc.next();
+//		System.out.println(playerGuess);
+//		
+//	}
+	
 	public static void guessLetter() {
 		String letterGuess;
 		System.out.println("Guess a letter A-Z");
 		letterGuess = sc.next();
 
 		// TODO add if statement checking if word contains letterGuess
-		System.out.println(letterGuess);
+//		System.out.println(letterGuess); <-- test 
 
 	}
 
