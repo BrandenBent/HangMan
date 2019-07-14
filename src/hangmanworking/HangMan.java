@@ -1,4 +1,4 @@
-package hangman;
+package hangmanworking;
 
 import java.util.Scanner;
 
@@ -9,7 +9,6 @@ public class HangMan {
 	public static void main(String[] args) {
 //		startGame();
 //		guessLetter();
-		System.out.println("test");
 		genWord();
 
 //		printHead();
@@ -32,7 +31,22 @@ public class HangMan {
 	}
 
 	public static void genWord() {
-		System.out.println("test");
+		int randomNum = (int)(Math.random() * (19) + 1) + 1;
+		String finalAnswer = "";
+		
+		while(true) {
+			System.out.println(randomNum);
+		}
+		
+		
+		
+//		switch (randomNum) {
+//		case randomNum = 
+//		
+//		
+//		
+//		
+//		}
 
 	}
 
