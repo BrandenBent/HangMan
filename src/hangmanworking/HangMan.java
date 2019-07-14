@@ -103,18 +103,28 @@ public class HangMan {
 //	XXX idk what im doing, send help
 	public static String doesContain() {
 		String finalAnswer = "";
+		boolean guessRight;
 		String letterGuess = guessLetter();
 		if (finalAnswer == "") {
 			finalAnswer = genWord();
 //		System.out.println(finalAnswer); <-test code
-		} else 
+		} 
 		if (finalAnswer.contains(letterGuess)) {
-			System.out.println("There is a " + letterGuess);
+			System.out.println("There is a(n) " + letterGuess);
+			guessRight = true;
 		} else {
 			System.out.println("There is no " + letterGuess);
+			guessRight = false;
 		}
+		
+		if (guessRight) {
+			
+		} else {
+			printHead();
+		}
+		
 		return finalAnswer;
-	} // holy shit that worked
+	} // holy shit that worked kinda
 	
 	public static void printHanger() {
 		System.out.println("       _______ ");
