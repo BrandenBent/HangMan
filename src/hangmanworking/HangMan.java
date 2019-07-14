@@ -11,7 +11,7 @@ public class HangMan {
 //		guessLetter();
 		genWord();
 		
-		// MORE TESTING CAN YOU SEE THIS
+
 
 //		printHead();
 //		printBody();
@@ -33,13 +33,45 @@ public class HangMan {
 	}
 
 	public static void genWord() {
-		int randomNum = (int)(Math.random() * (19) + 1) + 1;
 		String finalAnswer = "";
+		int randomNum = (int)(Math.random() * (10) + 1) + 1;
+
+		switch (randomNum) {
+		case 1:
+			finalAnswer = "green";
+			break;
+		case 2:
+			finalAnswer = "water";
+			break;
+		case 3:
+			finalAnswer = "rabbit";
+			break;
+		case 4:
+			finalAnswer = "keyboard";
+			break;
+		case 5:
+			finalAnswer = "coffee";
+			break;
+		case 6:
+			finalAnswer = "minnesota";
+			break;
+		case 7:
+			finalAnswer = "whiskey";
+			break;
+		case 8:
+			finalAnswer = "backpack";
+			break;
+		case 9:
+			finalAnswer = "sunshine";
+			break;
+		case 10:
+			finalAnswer = "garbage";
+			break;
 		
-		while(true) {
-			System.out.println(randomNum);
+		// TODO find out how to break string into individual characters
+		
+		
 		}
-		
 		
 		
 //		switch (randomNum) {
