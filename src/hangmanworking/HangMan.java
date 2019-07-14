@@ -41,7 +41,7 @@ public class HangMan {
 	public static String genWord() {
 		String finalAnswer = "";
 		int randomNum = (int) (Math.random() * (10) + 1) + 1;
-
+ //		TODO learn how to count number of characters in a given string
 		switch (randomNum) {
 		case 1:
 			finalAnswer = "green";
@@ -118,6 +118,7 @@ public class HangMan {
 			} else {
 				System.out.println("There is no " + letterGuess);
 				guessRight = false;
+//				i will only increment when guess is incorrect, neat
 				i++;
 			}
 
@@ -126,6 +127,9 @@ public class HangMan {
 			}
 
 			switch (i) {
+			case 0:
+				printHanger();
+				break;
 			case 1:
 				printHead();
 				break;
@@ -144,7 +148,8 @@ public class HangMan {
 			case 6:
 				printYouLose();
 				break;
-
+			default:
+				break;
 			}
 //		System.out.println(finalAnswer); <-- test to make sure answer doesn't change
 		} while (i <= 6);
