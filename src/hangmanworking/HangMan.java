@@ -181,7 +181,7 @@ public class HangMan {
 		System.out.println("              |");
 		System.out.println("              |");
 		System.out.println("       _______|________ ");
-		System.out.println("      /_______|________\\ \\n");
+		System.out.println("      /_______|________\\ \n");
 	}
 
 	public static void printLeftArm() {
@@ -193,7 +193,7 @@ public class HangMan {
 		System.out.println("              |");
 		System.out.println("              |");
 		System.out.println("       _______|________ ");
-		System.out.println("      /_______|________\\ \\n");
+		System.out.println("      /_______|________\\ \n");
 	}
 
 	public static void printRightArm() {
@@ -205,7 +205,7 @@ public class HangMan {
 		System.out.println("              |");
 		System.out.println("              |");
 		System.out.println("       _______|________ ");
-		System.out.println("      /_______|________\\ \\n");
+		System.out.println("      /_______|________\\ \n");
 	}
 
 	public static void printLeftLeg() {
@@ -217,7 +217,7 @@ public class HangMan {
 		System.out.println("     /        |");
 		System.out.println("              |");
 		System.out.println("       _______|________ ");
-		System.out.println("      /_______|________\\ \\n");
+		System.out.println("      /_______|________\\ \n");
 	}
 
 	public static void printYouLose() {
@@ -229,7 +229,7 @@ public class HangMan {
 		System.out.println("     / \\      |");
 		System.out.println("              |");
 		System.out.println("       _______|________ ");
-		System.out.println("      /_______|________\\ \\n");
+		System.out.println("      /_______|________\\ \n");
 		
 		System.out.println("YOU LOSE!");
 		System.exit(0);
