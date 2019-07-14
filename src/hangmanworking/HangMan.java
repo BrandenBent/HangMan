@@ -9,7 +9,9 @@ public class HangMan {
 	public static void main(String[] args) {
 		
 		startGame();
-		genWord();
+		
+//		don't call genWord();, doesContain calls it inside of itself
+//		genWord();
 		
 //		no need to call guessLetter as the method doesContain calls it
 //		guessLetter();
@@ -75,8 +77,8 @@ public class HangMan {
 		// TODO find out how to break string into individual characters
 		}
 		
+		System.out.println(finalAnswer);  // <-- test code
 		return finalAnswer;
-//		System.out.println(finalAnswer); <-- test code
 	}
 
 //	public static void playerGuess() {
@@ -102,10 +104,10 @@ public class HangMan {
 	public static String doesContain() {
 		String finalAnswer = "";
 		String letterGuess = guessLetter();
-		if (finalAnswer == "")
+		if (finalAnswer == "") {
 			finalAnswer = genWord();
 //		System.out.println(finalAnswer); <-test code
-		
+		} else 
 		if (finalAnswer.contains(letterGuess)) {
 			System.out.println("There is a " + letterGuess);
 		} else {
