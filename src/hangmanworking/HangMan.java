@@ -7,12 +7,12 @@ public class HangMan {
 	public static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
+
 		startGame();
-		
+
 //		don't call genWord();, doesContain calls it inside of itself
 //		genWord();
-		
+
 //		no need to call guessLetter as the method doesContain calls it
 //		guessLetter();
 		doesContain();
@@ -40,7 +40,7 @@ public class HangMan {
 
 	public static String genWord() {
 		String finalAnswer = "";
-		int randomNum = (int)(Math.random() * (10) + 1) + 1;
+		int randomNum = (int) (Math.random() * (10) + 1) + 1;
 
 		switch (randomNum) {
 		case 1:
@@ -73,11 +73,11 @@ public class HangMan {
 		case 10:
 			finalAnswer = "garbage";
 			break;
-		
+
 		// TODO find out how to break string into individual characters
 		}
-		
-		System.out.println(finalAnswer);  // <-- test code
+
+		System.out.println(finalAnswer); // <-- test code
 		return finalAnswer;
 	}
 
@@ -87,12 +87,12 @@ public class HangMan {
 //		System.out.println(playerGuess);
 //		
 //	}
-	
+
 	public static String guessLetter() {
 		String letterGuess;
 		System.out.println("Guess a letter A-Z");
 		letterGuess = sc.next();
-		
+
 		return letterGuess;
 
 		// TODO add if statement checking if word contains letterGuess
@@ -104,28 +104,50 @@ public class HangMan {
 	public static String doesContain() {
 		String finalAnswer = "";
 		boolean guessRight;
-		String letterGuess = guessLetter();
 		if (finalAnswer == "") {
 			finalAnswer = genWord();
 //		System.out.println(finalAnswer); <-test code
-		} 
-		if (finalAnswer.contains(letterGuess)) {
-			System.out.println("There is a(n) " + letterGuess);
-			guessRight = true;
-		} else {
-			System.out.println("There is no " + letterGuess);
-			guessRight = false;
 		}
-		
-		if (guessRight) {
+		int i = 0;
+
+		do  {
+			String letterGuess = guessLetter();
+			if (finalAnswer.contains(letterGuess)) {
+				System.out.println("There is a(n) " + letterGuess);
+				guessRight = true;
+			} else {
+				System.out.println("There is no " + letterGuess);
+				guessRight = false;
+				i++;
+			}
+
+			if (guessRight) {
+				System.out.println("Goodjob");
+			} 
 			
-		} else {
-			printHead();
-		}
-		
+			switch (i) {
+			case 1: printHead();
+			break;
+			case 2: printBody();
+			break;
+			case 3: printLeftArm();
+			break;
+			case 4: printRightArm();
+			break;
+			case 5: printLeftLeg();
+			break;
+			case 6: printYouLose();
+			break;
+				
+			
+			
+			}
+//		System.out.println(finalAnswer); <-- test to make sure answer doesn't change
+		} while(i <=6);
+			
 		return finalAnswer;
 	} // holy shit that worked kinda
-	
+
 	public static void printHanger() {
 		System.out.println("       _______ ");
 		System.out.println("      |       |");
@@ -208,6 +230,10 @@ public class HangMan {
 		System.out.println("              |");
 		System.out.println("       _______|________ ");
 		System.out.println("      /_______|________\\ \\n");
+		
+		System.out.println("YOU LOSE!");
+		System.exit(0);
 	}
+	
 
 } // end class
